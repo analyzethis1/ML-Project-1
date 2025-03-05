@@ -169,3 +169,19 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+###################################
+### Custom Rules for This Project
+###################################
+
+# Exclude data and models
+data/
+models/
+
+# Exclude large files
+*.pkl
+*.h5
+*.csv
+
+# Jupyter Notebook checkpoints (already included, but reaffirming)
+*.ipynb_checkpoints/
