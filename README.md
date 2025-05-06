@@ -3,7 +3,7 @@ A predictive maintenance model for real estate assets that can predict failures 
 
 
 ## Project Overview
-- **Goal**: Predict equipment failures (e.g., HVAC systems) using time series forecasting and reinforcement learning.
+- **Goal**: Predict equipment failures using time series forecasting and reinforcement learning.
 - **Business Impact**: Reduces maintenance costs by prioritizing critical repairs.
 
 - **Phase 1:** Data Acquisition & Preprocessing  
