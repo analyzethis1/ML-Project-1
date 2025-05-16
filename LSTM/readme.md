@@ -1,4 +1,4 @@
-# PropertyPulse LSTM: Predictive Maintenance Model
+# ML-Project-1 LSTM: Predictive Maintenance Model
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange)](https://www.tensorflow.org/)
@@ -7,7 +7,7 @@
 
 ## Overview
 
-PropertyPulse LSTM is a sophisticated predictive maintenance solution that combines Long Short-Term Memory (LSTM) neural networks with Reinforcement Learning (RL) to optimize building maintenance schedules. The system analyzes time series data from sensors to predict potential equipment failures and recommends optimal maintenance schedules to minimize costs and prevent downtime.
+The LSTM branch of this project is a sophisticated predictive maintenance solution that combines Long Short-Term Memory (LSTM) neural networks with Reinforcement Learning (RL) to optimize building maintenance schedules. The system analyzes time series data from sensors to predict potential equipment failures and recommends optimal maintenance schedules to minimize costs and prevent downtime.
 
 ## Features
 
