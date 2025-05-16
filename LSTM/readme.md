@@ -7,7 +7,7 @@
 
 ## Overview
 
-The LSTM branch of this project is a sophisticated predictive maintenance solution that combines Long Short-Term Memory (LSTM) neural networks with Reinforcement Learning (RL) to optimize building maintenance schedules. The system analyzes time series data from sensors to predict potential equipment failures and recommends optimal maintenance schedules to minimize costs and prevent downtime.
+This LSTM module is part of a larger ML-Project-1 framework that aims to revolutionize building maintenance operations. The primary goal is to connect this model to Building Management Systems (BMS) for real-time equipment monitoring, failure prediction, and maintenance schedule optimization to minimize costs and prevent downtime.
 
 ## Features
 
