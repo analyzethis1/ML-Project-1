@@ -76,12 +76,12 @@ ML-Project-1/
 ├── LSTM/                       # LSTM-based predictive maintenance module
 │   ├── Dockerfile              # Containerization for LSTM model
 │   ├── requirements.txt        # LSTM-specific dependencies
-│   ├── train_model.py          # LSTM training script
+│   ├── main.py                 # LSTM script
 │   └── README.md               # LSTM module documentation
 ├── LightGBM/                   # LightGBM-based HVAC analysis module
 │   ├── Dockerfile              # Containerization for LightGBM model
 │   ├── requirements.txt        # LightGBM-specific dependencies
-│   ├── train_model.py          # LightGBM training script
+│   ├── main.py                 # LightGBM script
 │   └── README.md               # LightGBM module documentation
 ├── LICENSE                     # Project license
 └── README.md                   # Main project documentation (this file)
