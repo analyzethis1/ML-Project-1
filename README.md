@@ -30,7 +30,7 @@ A sophisticated deep learning model designed for predictive maintenance based on
   - Failure probability estimation
   - Integration with reinforcement learning for optimal maintenance scheduling
 
-[View LSTM Documentation](./LSTM/README.md](https://github.com/analyzethis1/ML-Project-1/blob/main/LSTM/readme.md))
+[View LSTM Documentation](https://github.com/analyzethis1/ML-Project-1/blob/main/LSTM/readme.md)
 
 ### LightGBM Model
 
@@ -43,7 +43,7 @@ A gradient boosting framework optimized for HVAC system analysis and prediction.
   - Hyperparameter optimization via Optuna
   - Robust handling of building-specific features
 
-[View LightGBM Documentation](./LightGBM/README.md)
+[View LightGBM Documentation](https://github.com/analyzethis1/ML-Project-1/blob/main/LightGBM/readme.md)
 
 ## 🔧 Technology Stack
 
