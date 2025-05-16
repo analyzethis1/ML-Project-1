@@ -138,4 +138,4 @@ To integrate with your Building Management System:
 
 ## Contact
 
-For any questions or inquiries, please contact: your.email@example.com
+For any questions or inquiries, please feel free to contact me!
