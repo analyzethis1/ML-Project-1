@@ -87,7 +87,7 @@ ML-Project-1/
 └── README.md                   # Main project documentation (this file)
 ```
 
-## 🚀 Getting Started
+## ▶️ Getting Started
 
 ### Installation
 
@@ -136,10 +136,10 @@ ML-Project-1 is currently in **Alpha** stage. Core functionality is implemented 
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contributing
+## 💻 Contributing
 
 Interested in contributing to ML-Project-1? Please contact the repository owner for collaboration opportunities.
 
-## 📧 Contact
+## 🛟 Help & Questions
 
 For any questions or inquiries about this project, please feel free to contact me!
