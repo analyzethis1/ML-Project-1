@@ -18,7 +18,7 @@ ML-Project-1 is an innovative machine learning platform designed to revolutioniz
 
 ## 🧠 Models
 
-PropertyPulse currently includes the following specialized models:
+ML-Project-1 currently includes the following specialized models:
 
 ### LSTM Model
 
@@ -138,7 +138,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Contributing
 
-Interested in contributing to PropertyPulse? Please contact the repository owner for collaboration opportunities.
+Interested in contributing to ML-Project-1? Please contact the repository owner for collaboration opportunities.
 
 ## 📧 Contact
 
