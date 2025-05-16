@@ -1,4 +1,4 @@
-# ML-Project-1: LightGBM
+# ML-Project-1: Light GBM
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange)](https://www.tensorflow.org/)
@@ -21,7 +21,7 @@
 
 ## Overview
 
-This LightGBM module is part of a larger ML-Project-1 framework that aims to provide real-time monitoring and analysis capabilities for building HVAC systems. While initially trained on historical ASHRAE data, the primary goal is to connect this model to BMS systems for real-time energy consumption monitoring and analysis.
+This Light GBM module is part of a larger ML-Project-1 framework that aims to provide real-time monitoring and analysis capabilities for building HVAC systems. While initially trained on historical ASHRAE data, the primary goal is to connect this model to BMS systems for real-time energy consumption monitoring and analysis.
 
 **Key Features:**
 - Real-time HVAC energy consumption monitoring
@@ -69,7 +69,7 @@ psutil>=5.9.0
 The initial model training utilizes the ASHRAE energy prediction dataset. To train the model:
 
 1. Download the ASHRAE dataset from [Kaggle](https://www.kaggle.com/c/ashrae-energy-prediction/data)
-2. Place the following files in a `datasets` folder within the LightGBM directory:
+2. Place the following files in a `datasets` folder within the Light GBM directory:
    - `building_metadata.csv`
    - `train.csv`
    - `weather_train.csv`
@@ -78,7 +78,7 @@ The initial model training utilizes the ASHRAE energy prediction dataset. To tra
 
 ## Model Architecture
 
-The LightGBM model is specifically engineered for HVAC energy consumption analysis with the following characteristics:
+The Light GBM model is specifically engineered for HVAC energy consumption analysis with the following characteristics:
 
 - **Time-Series Focus**: Uses time-based features and lag variables to capture temporal patterns in energy usage
 - **Weather Integration**: Incorporates weather data to account for external environmental factors
@@ -100,7 +100,7 @@ The training script (`train_model.py`) performs:
    - Normalizes numerical features using RobustScaler
 
 2. **Hyperparameter Optimization**:
-   - Uses Optuna to find optimal LightGBM parameters
+   - Uses Optuna to find optimal Light GBM parameters
    - Implements time-series cross-validation to maintain temporal integrity
    - Optimizes for RMSE to ensure accurate predictions
 
