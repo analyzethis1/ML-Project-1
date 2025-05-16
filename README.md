@@ -30,7 +30,7 @@ A sophisticated deep learning model designed for predictive maintenance based on
   - Failure probability estimation
   - Integration with reinforcement learning for optimal maintenance scheduling
 
-[View LSTM Documentation](./LSTM/README.md)
+[View LSTM Documentation]([/LSTM/README.md](https://github.com/analyzethis1/ML-Project-1/blob/main/LSTM/readme.md))
 
 ### LightGBM Model
 
