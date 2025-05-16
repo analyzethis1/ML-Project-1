@@ -1,11 +1,10 @@
-# LightGBM-Based HVAC Energy Consumption Monitor
+# ML-Project-1: LightGBM
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange)](https://www.tensorflow.org/)
 [![Stable-Baselines3](https://img.shields.io/badge/StableBaselines3-Latest-green)](https://stable-baselines3.readthedocs.io/)
 ![License](https://img.shields.io/badge/license-CC%20BY--NC--ND%204.0%20International-blue.svg)
 
-This module contains the code and resources for training and evaluating a Light GBM (Gradient Boosting Machine) model designed to monitor and analyze HVAC energy consumption in real-time building environments. The model is initially trained on the ASHRAE energy prediction dataset and designed for integration with Building Management Systems (BMS).
 
 ## Table of Contents
 - [Overview](#overview)
@@ -165,3 +164,11 @@ docker run -v $(pwd)/datasets:/app/datasets -v $(pwd)/outputs:/app/outputs light
 ```
 
 This containerized approach allows for easier deployment in production environments and integration with BMS systems.
+
+## License
+
+[MIT License](LICENSE)
+
+## Contact
+
+For any questions or inquiries, please feel free to contact me!
