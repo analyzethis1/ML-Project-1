@@ -6,7 +6,7 @@
 ![License](https://img.shields.io/badge/license-CC%20BY--NC--ND%204.0%20International-blue.svg)
 
 ## Overview
-ML-Project-1 is an innovative machine learning platform designed to revolutionize property management through predictive maintenance and optimization. By leveraging time series data analysis and reinforcement learning, PropertyPulse helps property managers identify potential equipment failures before they occur, optimize repair schedules, and minimize costly downtime.
+ML-Project-1 is a comprehensive Streamlit application that integrates multiple machine learning models to enhance property management through predictive maintenance and operational optimization. This platform leverages time series analysis and reinforcement learning to anticipate equipment failures, optimize maintenance schedules, and reduce costly downtime, empowering property managers to make data-driven decisions with greater confidence.
 
 ## 🎯 Key Objectives
 
