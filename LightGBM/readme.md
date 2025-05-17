@@ -7,7 +7,7 @@
 
 
 ## Table of Contents
-- [📝 Overview](#overview)
+- [📝 Overview](#📝overview)
 - [🛠️ Requirements](#requirements)
 - [⚙️ Setup](#setup)
 - [🗂️ Data](#data)
@@ -109,7 +109,7 @@ The training script (`train_model.py`) performs:
    - Handles categorical features appropriately
    - Evaluates model performance on historical data
 
-##🔗 Integration with BMS
+## 🔗 Integration with BMS
 
 This model is specifically designed to connect with Building Management Systems:
 
@@ -133,7 +133,7 @@ Evaluation outputs are saved to the `outputs/` directory, including:
 - Performance metrics logs
 - Feature importance visualization
 
-##📁 Outputs
+## 📁 Outputs
 
 The training process generates:
 
