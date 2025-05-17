@@ -3,7 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange)](https://www.tensorflow.org/)
 [![Stable-Baselines3](https://img.shields.io/badge/StableBaselines3-Latest-green)](https://stable-baselines3.readthedocs.io/)
-![License](https://img.shields.io/badge/license-CC%20BY--NC--ND%204.0%20International-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Overview
 
@@ -27,6 +27,20 @@ The system consists of two main components:
 ## Data
 
 The model was initially trained on the [NASA Turbofan Engine Degradation Simulation Dataset](https://www.kaggle.com/datasets/behrad3d/nasa-cmaps) on Kaggle, which provides a rich source of degradation patterns. While developed using this dataset, the system is designed to be adaptable to building sensor data from BMS systems.
+
+
+## Project Structure
+
+```
+ML-Project-1/
+├── LSTM/                       # LSTM-based predictive maintenance module
+│   ├── Dockerfile              # Containerization for LSTM model
+│   ├── requirements.txt        # LSTM-specific dependencies
+│   ├── main.py                 # LSTM model training and RL agent
+└── README.md                   # LSTM module documentation
+
+```
+
 
 ## Requirements
 
@@ -56,49 +70,107 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+
+## Docker Usage
+
+The project includes a Dockerfile for easy deployment and isolation. To use Docker:
+
+```bash
+# Build the Docker image
+docker build -t ml-project-lstm .
+
+# Run the container with your data mounted
+docker run -v /path/to/your/data:/data ml-project-lstm
+```
+
+
 ## Usage
 
 ### Training the Models
 
 ```python
 # Run the training script
-python train_model.py --data_path path/to/your/sensor_data.txt
+python main.py --data_path path/to/your/sensor_data.txt
 ```
 
-### Making Predictions
+### Using the Model for Predictions
 
 ```python
 import joblib
+import numpy as np
+import pandas as pd
 from tensorflow.keras.models import load_model
-from property_pulse.utils import preprocess_data, create_sequences
+from sklearn.preprocessing import MinMaxScaler
 
 # Load models
-lstm_model = load_model("lstm_model.h5")
+model = load_model("lstm_model.h5")
 scaler = joblib.load("scaler.pkl")
-rl_agent = joblib.load("rl_maintenance_agent.pkl")
+rl_agent = joblib.load("rl_maintenance_agent")
 
-# Preprocess your new data
-processed_data = preprocess_data(your_sensor_data, scaler)
-sequences, _ = create_sequences(processed_data)
+# Function to create sequences from new data
+def create_sequences(data, sensor_cols, window_size=30, step_size=1):
+    sequences = []
+    for engine_id in data["id"].unique():
+        engine_data = data[data["id"] == engine_id].reset_index(drop=True)
+        for i in range(0, len(engine_data) - window_size, step_size):
+            seq = engine_data.iloc[i:i+window_size][sensor_cols].values
+            sequences.append(seq)
+    return np.array(sequences)
 
-# Get failure probabilities
-failure_probs = lstm_model.predict(sequences).flatten()
+# Preprocess new data
+def process_new_data(new_data, scaler, sensor_cols):
+    new_data[sensor_cols] = scaler.transform(new_data[sensor_cols])
+    return new_data
 
-# Get maintenance recommendations
-from property_pulse.environment import MaintenanceEnv
-env = MaintenanceEnv(failure_probs)
-obs, _ = env.reset()
-maintenance_schedule = []
+# Generate maintenance recommendations
+def recommend_actions(new_sensor_data, model, rl_agent, scaler, sensor_cols):
+    processed_data = process_new_data(new_sensor_data, scaler, sensor_cols)
+    sequences = create_sequences(processed_data, sensor_cols)
+    failure_probs = model.predict(sequences).flatten()
+    
+    from gymnasium import spaces
+    import numpy as np
+    import gym
+    
+    class MaintenanceEnv(gym.Env):
+        def __init__(self, failure_probs, repair_cost=1000, downtime_cost=5000):
+            super().__init__()
+            self.failure_probs = failure_probs
+            self.repair_cost = repair_cost
+            self.downtime_cost = downtime_cost
+            self.current_step = 0
+            self.action_space = spaces.Discrete(2)
+            self.observation_space = spaces.Box(low=np.array([0.0, 0.0]), high=np.array([1.0, 100.0]), dtype=np.float32)
 
-for _ in range(len(failure_probs)):
-    action, _ = rl_agent.predict(obs)
-    maintenance_schedule.append(action)
-    obs, _, done, _, _ = env.step(action)
-    if done:
-        break
+        def step(self, action):
+            done = self.current_step >= len(self.failure_probs) - 1
+            if done:
+                return self.state, 0.0, done, False, {}
+            reward = -self.repair_cost if action == 1 else 0.0
+            if action == 0 and self.failure_probs[self.current_step] > 0.5:
+                reward -= self.downtime_cost
+            self.state = np.array([self.failure_probs[self.current_step], 
+                                  self.state[1] + 1 if action == 0 else 0.0], dtype=np.float32)
+            self.current_step += 1
+            return self.state, reward, done, False, {}
 
-# maintenance_schedule now contains optimal maintenance timings
-# 1 = perform maintenance, 0 = no maintenance needed
+        def reset(self, seed=None, options=None):
+            self.current_step = 0
+            self.state = np.array([0.0, 0.0], dtype=np.float32)
+            return self.state, {}
+    
+    env = MaintenanceEnv(failure_probs)
+    obs, _ = env.reset()
+    actions = []
+    
+    for _ in range(len(failure_probs)):
+        action, _ = rl_agent.predict(obs)
+        actions.append(action)
+        obs, _, done, _, _ = env.step(action)
+        if done:
+            break
+    
+    return actions
 ```
 
 ## Model Details
@@ -137,6 +209,10 @@ To integrate with your Building Management System:
 
 [MIT License](LICENSE)
 
-## Contact
+## 💻 Contributing
 
-For any questions or inquiries, please feel free to contact me!
+Interested in contributing to ML-Project-1? Please contact the repository owner for collaboration opportunities.
+
+## 🛟 Help & Questions
+
+For any questions or inquiries about this project, please feel free to contact me!
