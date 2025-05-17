@@ -5,31 +5,31 @@
 [![Stable-Baselines3](https://img.shields.io/badge/StableBaselines3-Latest-green)](https://stable-baselines3.readthedocs.io/)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## Overview
+## 📋 Overview
 
 This LSTM module is part of a larger ML-Project-1 framework that aims to revolutionize building maintenance operations. The primary goal is to connect this model to Building Management Systems (BMS) for real-time equipment monitoring, failure prediction, and maintenance schedule optimization to minimize costs and prevent downtime.
 
-## Features
+## ✨ Features
 
-- **Failure Prediction**: LSTM-based model for accurate prediction of equipment failures based on sensor readings
-- **Maintenance Optimization**: Reinforcement Learning (PPO) agent that determines the optimal timing for maintenance actions
-- **Cost-Effective Decisions**: Balances repair costs against potential downtime costs for optimal resource allocation
-- **BMS Integration**: Designed to connect with Building Management Systems (BMS) to monitor real-time sensor data
-- **Scalable Pipeline**: Preprocessing, model training, and evaluation workflows for continuous improvement
+- **🔮 Failure Prediction**: LSTM-based model for accurate prediction of equipment failures based on sensor readings
+- **⚙️ Maintenance Optimization**: Reinforcement Learning (PPO) agent that determines the optimal timing for maintenance actions
+- **💰 Cost-Effective Decisions**: Balances repair costs against potential downtime costs for optimal resource allocation
+- **🏢 BMS Integration**: Designed to connect with Building Management Systems (BMS) to monitor real-time sensor data
+- **📈 Scalable Pipeline**: Preprocessing, model training, and evaluation workflows for continuous improvement
 
-## Architecture
+## 🏗️ Architecture
 
 The system consists of two main components:
 
-1. **LSTM Predictive Model**: Processes time-series sensor data to predict the probability of equipment failure
-2. **RL Maintenance Agent**: Uses the failure probabilities to make cost-optimized maintenance decisions
+1. **🧠 LSTM Predictive Model**: Processes time-series sensor data to predict the probability of equipment failure
+2. **🎮 RL Maintenance Agent**: Uses the failure probabilities to make cost-optimized maintenance decisions
 
-## Data
+## 📊 Data
 
 The model was initially trained on the [NASA Turbofan Engine Degradation Simulation Dataset](https://www.kaggle.com/datasets/behrad3d/nasa-cmaps) on Kaggle, which provides a rich source of degradation patterns. While developed using this dataset, the system is designed to be adaptable to building sensor data from BMS systems.
 
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 ML-Project-1/
@@ -42,7 +42,7 @@ ML-Project-1/
 ```
 
 
-## Requirements
+## 📋 Requirements
 
 ```
 numpy
@@ -55,7 +55,7 @@ gymnasium
 stable-baselines3
 ```
 
-## Installation
+## 🚀 Installation
 
 ```bash
 # Clone the repository
@@ -71,7 +71,7 @@ pip install -r requirements.txt
 ```
 
 
-## Docker Usage
+## 🐳 Docker Usage
 
 The project includes a Dockerfile for easy deployment and isolation. To use Docker:
 
@@ -84,7 +84,7 @@ docker run -v /path/to/your/data:/data ml-project-lstm
 ```
 
 
-## Usage
+## 🛠️ Usage
 
 ### Training the Models
 
@@ -173,31 +173,31 @@ def recommend_actions(new_sensor_data, model, rl_agent, scaler, sensor_cols):
     return actions
 ```
 
-## Model Details
+## 📈 Model Details
 
-### LSTM Model
+### 🧠 LSTM Model
 
 - **Architecture**: Two-layer LSTM network (64 units followed by 32 units)
 - **Input**: Sequences of sensor readings (window size: 30 timesteps)
 - **Output**: Probability of failure
 - **Training**: Binary cross-entropy loss with Adam optimizer
 
-### Reinforcement Learning Agent
+### 🎮 Reinforcement Learning Agent
 
 - **Algorithm**: Proximal Policy Optimization (PPO)
 - **State Space**: Current failure probability and time since last maintenance
 - **Action Space**: Binary (perform maintenance or not)
 - **Reward Function**: Negative rewards for maintenance actions (-repair_cost) and failures (-downtime_cost)
 
-## Performance Optimization
+## ⚖️ Performance Optimization
 
 The model parameters can be tuned to balance between:
 
-- False positives (unnecessary maintenance)
-- False negatives (missed failures leading to downtime)
-- Repair costs vs. downtime costs
+- ❌ False positives (unnecessary maintenance)
+- ❌ False negatives (missed failures leading to downtime)
+- 💸 Repair costs vs. downtime costs
 
-## Integration with BMS
+## 🔄 Integration with BMS
 
 To integrate with your Building Management System:
 1. Set up a data pipeline from your BMS to extract sensor readings in a compatible format
@@ -205,7 +205,7 @@ To integrate with your Building Management System:
 3. Deploy the LSTM and RL models to make real-time predictions and recommendations
 4. Connect the output recommendations to your maintenance scheduling system
 
-## License
+## 📜 License
 
 [MIT License](LICENSE)
 
