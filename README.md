@@ -3,7 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange)](https://www.tensorflow.org/)
 [![Stable-Baselines3](https://img.shields.io/badge/StableBaselines3-Latest-green)](https://stable-baselines3.readthedocs.io/)
-![License](https://img.shields.io/badge/license-CC%20BY--NC--ND%204.0%20International-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Overview
 ML-Project-1 is a comprehensive Streamlit application that integrates multiple machine learning models to enhance property management through predictive maintenance and operational optimization. This platform leverages time series analysis and reinforcement learning to anticipate equipment failures, optimize maintenance schedules, and reduce costly downtime, empowering our partners to make data-driven decisions with greater confidence.
