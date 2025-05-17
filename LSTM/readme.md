@@ -45,8 +45,8 @@ stable-baselines3
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/PropertyPulse.git
-cd PropertyPulse/LSTM
+git clone https://github.com/yourusername/ML-Project-1.git
+cd ML-Project-1/LSTM
 
 # Create and activate a virtual environment
 python -m venv venv
