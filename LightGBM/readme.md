@@ -6,18 +6,6 @@
 ![License](https://img.shields.io/badge/license-CC%20BY--NC--ND%204.0%20International-blue.svg)
 
 
-## Table of Contents
-- [📝 Overview](#📝overview)
-- [🛠️ Requirements](#requirements)
-- [⚙️ Setup](#setup)
-- [🗂️ Data](#data)
-- [🧠 Model Architecture](#model-architecture)
-- [📝 Training Process](#training-process)
-- [🔗 Integration with BMS](#integration-with-bms)
-- [📊 Evaluation](#evaluation)
-- [📁 Outputs](#outputs)
-- [🚀 Usage](#usage)
-- [🐳 Docker Support](#docker-support)
 
 ## 📝 Overview
 
