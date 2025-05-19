@@ -1,4 +1,4 @@
-# ML-Project-1: LSTM
+# PropertyPulse: LSTM
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange)](https://www.tensorflow.org/)
@@ -7,7 +7,7 @@
 
 ## 📋 Overview
 
-This LSTM module is part of a larger ML-Project-1 framework that aims to revolutionize building maintenance operations. The primary goal is to connect this model to Building Management Systems (BMS) for real-time equipment monitoring, failure prediction, and maintenance schedule optimization to minimize costs and prevent downtime.
+This LSTM module is part of a larger PropertyPulse framework that aims to revolutionize building maintenance operations. The primary goal is to connect this model to Building Management Systems (BMS) for real-time equipment monitoring, failure prediction, and maintenance schedule optimization to minimize costs and prevent downtime.
 
 ## ✨ Features
 
@@ -32,7 +32,7 @@ The model was initially trained on the [NASA Turbofan Engine Degradation Simulat
 ## 📁 Project Structure
 
 ```
-ML-Project-1/
+PropertyPulse/
 ├── LSTM/                       # LSTM-based predictive maintenance module
 │   ├── Dockerfile              # Containerization for LSTM model
 │   ├── requirements.txt        # LSTM-specific dependencies
@@ -59,8 +59,8 @@ stable-baselines3
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ML-Project-1.git
-cd ML-Project-1/LSTM
+git clone https://github.com/yourusername/PropertyPulse.git
+cd PropertyPulse/LSTM
 
 # Create and activate a virtual environment
 python -m venv venv
@@ -211,7 +211,7 @@ To integrate with your Building Management System:
 
 ## 💻 Contributing
 
-Interested in contributing to ML-Project-1? Please contact the repository owner for collaboration opportunities.
+Interested in contributing to PropertyPulse? Please contact the repository owner for collaboration opportunities.
 
 ## 🛟 Help & Questions
 
