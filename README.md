@@ -1,4 +1,4 @@
-# ML-Project-1
+# PropertyPulse
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange)](https://www.tensorflow.org/)
@@ -6,7 +6,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Overview
-ML-Project-1 is a comprehensive Streamlit application that integrates multiple machine learning models to enhance property management through predictive maintenance and operational optimization. This platform leverages time series analysis and reinforcement learning to anticipate equipment failures, optimize maintenance schedules, and reduce costly downtime, empowering our partners to make data-driven decisions with greater confidence.
+PropertyPulse is a comprehensive Streamlit application that integrates multiple machine learning models to enhance property management through predictive maintenance and operational optimization. This platform leverages time series analysis and reinforcement learning to anticipate equipment failures, optimize maintenance schedules, and reduce costly downtime, empowering our partners to make data-driven decisions with greater confidence.
 
 ## 🎯 Key Objectives
 
@@ -18,7 +18,7 @@ ML-Project-1 is a comprehensive Streamlit application that integrates multiple m
 
 ## 🧠 Models
 
-ML-Project-1 currently includes the following specialized models:
+PropertyPulse currently includes the following specialized models:
 
 ### LSTM Model
 
@@ -30,7 +30,7 @@ A sophisticated deep learning model designed for predictive maintenance based on
   - Failure probability estimation
   - Integration with reinforcement learning for optimal maintenance scheduling
 
-[View LSTM Documentation](https://github.com/analyzethis1/ML-Project-1/blob/main/LSTM/readme.md)
+[View LSTM Documentation](https://github.com/analyzethis1/PropertyPulse/blob/main/LSTM/readme.md)
 
 ### LightGBM Model
 
@@ -43,7 +43,7 @@ A gradient boosting framework optimized for HVAC system analysis and prediction.
   - Hyperparameter optimization via Optuna
   - Robust handling of building-specific features
 
-[View LightGBM Documentation](https://github.com/analyzethis1/ML-Project-1/blob/main/LightGBM/readme.md)
+[View LightGBM Documentation](https://github.com/analyzethis1/PropertyPulse/blob/main/LightGBM/readme.md)
 
 ## 🔧 Technology Stack
 
@@ -72,7 +72,7 @@ psutil
 ## 📁 Project Structure
 
 ```
-ML-Project-1/
+PropertyPulse/
 ├── LSTM/                       # LSTM-based predictive maintenance module
 │   ├── Dockerfile              # Containerization for LSTM model
 │   ├── requirements.txt        # LSTM-specific dependencies
@@ -95,18 +95,18 @@ Each model module can be installed and run independently:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ml-project-1.git
-cd ML-Project-1
+git clone https://github.com/yourusername/PropertyPulse.git
+cd PropertyPulse
 
 # For LSTM model
 cd LSTM
-docker build -t ml-project-1-lstm .
-docker run -p 8000:8000 ml-project-1-lstm
+docker build -t PropertyPulse-lstm .
+docker run -p 8000:8000 PropertyPulse-lstm
 
 # For LightGBM model
 cd ../LightGBM
-docker build -t ml-project-1-lightgbm .
-docker run -p 8001:8000 ml-project-1-lightgbm
+docker build -t PropertyPulse-lightgbm .
+docker run -p 8001:8000 PropertyPulse-lightgbm
 ```
 
 ### Using the Models
@@ -130,7 +130,7 @@ This project is designed to connect with Building Management Systems (BMS) to in
 
 ## 🔄 Development Status
 
-ML-Project-1 is currently in **Alpha** stage. Core functionality is implemented and operational, but the system is still undergoing active development and testing.
+PropertyPulse is currently in **Alpha** stage. Core functionality is implemented and operational, but the system is still undergoing active development and testing.
 
 ## 📝 License
 
@@ -138,7 +138,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 💻 Contributing
 
-Interested in contributing to ML-Project-1? Please contact the repository owner for collaboration opportunities.
+Interested in contributing to PropertyPulse? Please contact the repository owner for collaboration opportunities.
 
 ## 🛟 Help & Questions
 
